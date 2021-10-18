@@ -5,7 +5,10 @@ import java.util.Scanner;
 
 public class Main {
 
+    static final double PI = 3.1415;
+
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
         String greeting = scanner.nextLine();
         int min = Integer.parseInt((greeting));
@@ -21,6 +24,27 @@ public class Main {
         // write your code here
         System.out.println(add(20, 10));
         print("Hiya!");
+
+        enum Type {
+            CAR,
+            MOTORCYCLE,
+            BOAT,
+        }
+
+        Type type = Type.CAR;
+        switch(type){
+            case CAR:
+                System.out.println("Car");
+                break;
+            case MOTORCYCLE:
+                System.out.println("Motorcycle");
+                break;
+            case BOAT:
+                System.out.println("Boat");
+                break;
+        }
+
+
     }
 
     static int add(int v1, int v2) {
