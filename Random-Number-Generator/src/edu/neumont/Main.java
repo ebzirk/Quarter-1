@@ -2,12 +2,15 @@ package edu.neumont;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Random;
 
 public class Main {
 
     public static void main(String[] args) {
         JFrame frame = new JFrame();
-        frame.setBounds(1000,1000,700,700);
+        frame.setBounds(1000,1000,550,700);
         frame.setLayout(null);
 
         JLabel title = new JLabel("Random Number Generator");
@@ -23,14 +26,36 @@ public class Main {
         frame.add(minimumLabel);
 
         JTextField maximum = new JTextField();
-        maximum.setBounds(350,200,200,30);
+        maximum.setBounds(300,200,200,30);
         frame.add(maximum);
-        JLabel maxLabel = new JLabel("Noun");
-        maxLabel.setBounds(350,200, 40, 30);
+        JLabel maxLabel = new JLabel("Maximum");
+        maxLabel.setBounds(370,250, 80, 30);
         frame.add(maxLabel);
 
+        JTextArea outputText = new JTextArea();
+        outputText.setBounds(230, 370, 80, 50);
+        outputText.setLineWrap(true);
+        outputText.setEditable(false);
+        outputText.setFont(new Font("Serif", Font.PLAIN, 25));
+        frame.add(outputText);
 
+        JButton button = new JButton("Get my number");
+        button.setBounds(170, 300, 200, 50);
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String minNum = minimum.getText();
+                String maxNum = maximum.getText();
+                int minPoint = Integer.parseInt(minNum);
+                int maxPoint = Integer.parseInt(maxNum);
+                Random rng = new Random();
+                int r = rng.nextInt(minPoint, maxPoint);
+                String ranNum = Integer.toString(r);
+                outputText.setText(ranNum);
 
+            }
+        });
+        frame.add(button);
 
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
