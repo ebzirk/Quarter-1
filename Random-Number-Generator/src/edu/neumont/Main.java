@@ -32,12 +32,10 @@ public class Main {
         maxLabel.setBounds(370,250, 80, 30);
         frame.add(maxLabel);
 
-        JTextArea outputText = new JTextArea();
-        outputText.setBounds(230, 370, 80, 50);
-        outputText.setLineWrap(true);
-        outputText.setEditable(false);
-        outputText.setFont(new Font("Serif", Font.PLAIN, 25));
-        frame.add(outputText);
+        JLabel output = new JLabel();
+        output.setBounds(250, 350, 100, 100);
+        output.setFont(new Font(null,Font.PLAIN, 30));
+        frame.add(output);
 
         JButton button = new JButton("Get my number");
         button.setBounds(170, 300, 200, 50);
@@ -51,7 +49,8 @@ public class Main {
                 Random rng = new Random();
                 int r = rng.nextInt(minPoint, maxPoint);
                 String ranNum = Integer.toString(r);
-                outputText.setText(ranNum);
+
+                output.setText(ranNum);
 
             }
         });
