@@ -22,8 +22,9 @@ public class Main {
         num2Field.setHorizontalAlignment(SwingConstants.CENTER);
         frame.add(num2Field);
 
+        //random number button
         JButton button = new JButton("Randomize");
-        button.setBounds(60, 100, 100, 50);
+        button.setBounds(40, 120, 100, 30);
         frame.add(button);
         button.addActionListener(new ActionListener() {
             @Override
@@ -36,6 +37,7 @@ public class Main {
             }
         });
 
+
         // result text
         JTextArea resultTextArea = new JTextArea();
         resultTextArea.setBounds(40,220,100,80);
@@ -43,28 +45,33 @@ public class Main {
         frame.add(resultTextArea);
 
 
+
         //calc button
         JButton calcButton = new JButton("Calculate");
         calcButton.setBounds(40,170,100,30);
         frame.add(calcButton);
+        calcButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+
+                int num1 = Integer.parseInt(num1Field.getText());
+                int num2 = Integer.parseInt(num2Field.getText());
+                String output = "Addition: "  + Helper.display(Helper.add(num1,num2));
+                output = output + "\nSubtraction: " + Helper.display(Helper.subtract(num1,num2));
+                output = output + "\nDivision: " + Helper.display(Helper.divide(num1,num2));
+                output = output + "\nMultiplication: " + Helper.display(Helper.divide(num1,num2));
+                output = output + "\nRemainder: " + Helper.display(Helper.remainder(num1,num2));
+                resultTextArea.setText(output);
+
+
+            }
+        });
+
+
 
         frame.setVisible(true);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-
-
-        int v1 = Helper.getRandom(1,30);
-        int v2 = Helper.getRandom(1,30);
-
-        System.out.println(v1 + " " + v2);
-        System.out.println(v1+v2);
-        System.out.println(Helper.add(v1, v2));
-        System.out.println(Helper.multiply(v1, v2));
-        System.out.println(Helper.subtract(v1, v2));
-        System.out.println(Helper.divide(v1, v2));
-        System.out.println(Helper.remainder(v1, v2));
-        System.out.println();
-
-        int i = 5 / 0;
     }
 
 }

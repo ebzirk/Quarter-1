@@ -20,10 +20,15 @@ public class Helper {
             return v1 % v2;
         }
 
-        static int getRandom(int min, int max) {
+        static int getRandom(int v1, int v2) {
             Random random = new Random();
-            return random.nextInt(min, max);
+            return random.nextInt(v1, v2);
         }
+
+        static String display(double value) {
+            return String.format("%.0f", value);
+        }
+
     }
 
 
