@@ -3,7 +3,6 @@ package edu.neumont;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Random;
 
 public class Main {
 
@@ -29,38 +28,43 @@ public class Main {
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                int num1 = helper.getRandom(1, 100);
-                int num2 = helper.getRandom(1, 100);
+                int num1 = Helper.getRandom(1, 100);
+                int num2 = Helper.getRandom(1, 100);
 
                 num1Field.setText(Integer.toString(num1));
                 num2Field.setText(Integer.toString(num2));
             }
         });
 
+        // result text
+        JTextArea resultTextArea = new JTextArea();
+        resultTextArea.setBounds(40,220,100,80);
+        resultTextArea.setEditable(false);
+        frame.add(resultTextArea);
+
+
+        //calc button
+        JButton calcButton = new JButton("Calculate");
+        calcButton.setBounds(40,170,100,30);
+        frame.add(calcButton);
 
         frame.setVisible(true);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
 
-
-
-
-
-        int v1 = helper.getRandom(1,30);
-        int v2 = helper.getRandom(1,30);
+        int v1 = Helper.getRandom(1,30);
+        int v2 = Helper.getRandom(1,30);
 
         System.out.println(v1 + " " + v2);
         System.out.println(v1+v2);
-        System.out.println(helper.add(v1, v2));
-        System.out.println(helper.multiply(v1, v2));
-        System.out.println(helper.subtract(v1, v2));
-        System.out.println(helper.divide(v1, v2));
-        System.out.println(helper.remainder(v1, v2));
+        System.out.println(Helper.add(v1, v2));
+        System.out.println(Helper.multiply(v1, v2));
+        System.out.println(Helper.subtract(v1, v2));
+        System.out.println(Helper.divide(v1, v2));
+        System.out.println(Helper.remainder(v1, v2));
+        System.out.println();
 
         int i = 5 / 0;
     }
-
-
-
 
 }
