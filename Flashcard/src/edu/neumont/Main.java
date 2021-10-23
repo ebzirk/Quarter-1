@@ -29,11 +29,9 @@ public class Main {
         operand2Label.setFont(new Font("Arial", Font.BOLD, 36));
         frame.add(operand2Label);
 
-        JLabel incorrect = new JLabel("Incorrect!");
-        incorrect.setBounds(40, 200, 140, 40);
-
-        JLabel correctAns = new JLabel("Correct!");
-        correctAns.setBounds(40, 200, 140, 40);
+        JLabel inCor = new JLabel();
+        inCor.setBounds(40, 200, 140, 40);
+        frame.add(inCor);
 
 
         JTextField answerTextField = new JTextField();
@@ -50,9 +48,10 @@ public class Main {
                     operand1Label.setText(Integer.toString(flashcard.operand1));
                     operand2Label.setText(Integer.toString(flashcard.operand2));
                     answerTextField.setText("");
+                    inCor.setText("Correct!");
                 }
                 else {
-                    frame.add(incorrect);
+                    inCor.setText("Incorrect!");
                 }
 
 
@@ -60,12 +59,7 @@ public class Main {
             }
         });
 
-
-
         frame.add(answerTextField);
-
-
-
 
         frame.setLayout(null);
         frame.setVisible(true);
