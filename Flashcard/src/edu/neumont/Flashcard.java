@@ -17,6 +17,5 @@ public class Flashcard {
         operand1 = getRandom(1, 10);
         operand2 = getRandom(1, 10);
         answer = operand1 + operand2;
-        System.out.println(answer);
     }
 }
