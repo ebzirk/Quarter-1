@@ -49,13 +49,11 @@ public class Main {
                     operand2Label.setText(Integer.toString(flashcard.operand2));
                     answerTextField.setText("");
                     inCor.setText("Correct!");
-                }
-                else {
+                } else if (numAns - flashcard.answer <= 2 || numAns - flashcard.answer >= -2) {
+                   inCor.setText("Close!");
+                } else {
                     inCor.setText("Incorrect!");
                 }
-
-
-
             }
         });
 

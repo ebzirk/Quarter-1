@@ -31,6 +31,8 @@ public class Main {
             BOAT,
         }
 
+        System.out.println(Type.CAR);
+
         Type type = Type.CAR;
         switch(type){
             case CAR:

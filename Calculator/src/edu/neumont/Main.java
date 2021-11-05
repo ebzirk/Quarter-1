@@ -37,14 +37,11 @@ public class Main {
             }
         });
 
-
         // result text
         JTextArea resultTextArea = new JTextArea();
         resultTextArea.setBounds(40,220,100,80);
         resultTextArea.setEditable(false);
         frame.add(resultTextArea);
-
-
 
         //calc button
         JButton calcButton = new JButton("Calculate");
@@ -53,8 +50,6 @@ public class Main {
         calcButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
-
                 int num1 = Integer.parseInt(num1Field.getText());
                 int num2 = Integer.parseInt(num2Field.getText());
                 String output = "Addition: "  + Helper.display(Helper.add(num1,num2));
@@ -63,13 +58,8 @@ public class Main {
                 output = output + "\nMultiplication: " + Helper.display(Helper.divide(num1,num2));
                 output = output + "\nRemainder: " + Helper.display(Helper.remainder(num1,num2));
                 resultTextArea.setText(output);
-
-
             }
         });
-
-
-
         frame.setVisible(true);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }

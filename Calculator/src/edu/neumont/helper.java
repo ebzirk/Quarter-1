@@ -17,6 +17,7 @@ public class Helper {
             return v1 / v2;
         }
         static int remainder(int v1, int v2){
+            if (v2 == 0) return -1;
             return v1 % v2;
         }
 

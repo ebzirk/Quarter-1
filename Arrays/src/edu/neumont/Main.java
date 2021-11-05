@@ -51,5 +51,6 @@ public class Main {
         }
         System.out.println(sold + " Tickets sold.");
         System.out.println(seats.length - sold + " Tickets available.");
+
     }
 }
