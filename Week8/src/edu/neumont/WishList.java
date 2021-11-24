@@ -16,6 +16,13 @@ public class WishList {
         }
         System.out.println("Total: $"+String.format("%.2f",getTotal()));
     }
+    public void display(Product.eType type){
+        for (Product product:products){
+            if (product.getType() == type){
+                product.display();
+            }
+        }
+    }
     public double getTotal(){
         double total=0;
         for (Product product:products){

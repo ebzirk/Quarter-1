@@ -8,20 +8,19 @@ import java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args) {
-        Product product = new Product("headphones", 4.99);
-        product.display();
-        //product.setPrice("399.99aa");
-        Product p1 = new Product("xbox", 499.99);
+        Product p1 = new Product("xbox", 499.99, Product.eType.Entertainment);
         p1.setPrice("340");
         p1.display();
 
 
         WishList wishlist = new WishList();
-        wishlist.add(new Product("Headphones",  100.00));
-        wishlist.add(new Product("PS5",450.00));
-        wishlist.add(new Product("aaaa's bars",50.00));
+        wishlist.add(new Product("Keyboard",100.00, Product.eType.Electronic));
+        wishlist.add(new Product("PS5",450.00, Product.eType.Electronic));
+        wishlist.add(new Product("Eyeshadow",50.00, Product.eType.Cosmetics));
+        wishlist.add(new Product("Steak",39.00, Product.eType.Food));
 
         wishlist.display();
+        wishlist.display(Product.eType.Entertainment);
 
     }
 }

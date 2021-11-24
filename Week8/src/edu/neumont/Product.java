@@ -1,12 +1,24 @@
 package edu.neumont;
 
 public class Product {
+    // 8-2 Enum
+    enum eType{
+        Undefined,
+        Electronic,
+        Cosmetics,
+        Entertainment,
+        Food
+    }
+
+    private String name;
+    private double price;
+    private eType type = eType.Undefined;
+
     //Final Variables Declared
     private final static double TAX = 0.085;
     private final static double MIN_PRICE = 0;
     private final static double MAX_PRICE = 10000;
-    private String name;
-    private double price;
+
 
 
     public Product() {}
@@ -20,6 +32,11 @@ public class Product {
         this.price = price;
     }
 
+    public Product(String name, double price, eType type) {
+        this.name = name;
+        this.price = price;
+        this.type = type;
+    }
 
     public String getName() {
         return name;
@@ -68,6 +85,14 @@ public class Product {
         return price + getTax();
     }
 
+
+    public eType getType() {
+        return type;
+    }
+
+    public void setType(eType type) {
+        this.type = type;
+    }
 
     public void display() {
         System.out.println("name: " + name + "\n price " + price);
