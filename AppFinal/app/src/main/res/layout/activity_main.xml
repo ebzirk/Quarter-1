@@ -7,13 +7,46 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
     <TextView
-            android:text="How does this work"
-            android:layout_width="339dp"
-            android:layout_height="53dp" android:id="@+id/title"
+            android:text="Su'cuy, Vod"
+            android:layout_width="393dp"
+            android:layout_height="56dp" android:id="@+id/title"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.496"
-            app:layout_constraintVertical_bias="0.038" android:textSize="34sp" android:gravity="bottom|center"
-            android:fontFamily="@font/mandalor"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.048" android:textSize="48sp" android:gravity="bottom|center"
+            android:fontFamily="@font/mandalor" android:textColor="#000000"/>
+    <TextView
+            android:layout_width="260dp"
+            android:layout_height="98dp" android:id="@+id/mando"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintVertical_bias="0.277" android:textColor="#000000" android:gravity="center"
+            android:textSize="24sp"/>
+    <Button
+            android:text="Check"
+            android:layout_width="238dp"
+            android:layout_height="58dp" android:id="@+id/check"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:backgroundTint="#9E0101" android:onClick="languageCheck"
+            android:visibility="invisible" app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintVertical_bias="0.811"/>
+    <Button
+            android:text="Language!"
+            android:layout_width="215dp"
+            android:layout_height="68dp" android:id="@+id/button2"
+            android:onClick="languageClick" android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/answerTextField"
+            android:hint="Input Answer" android:visibility="invisible" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
