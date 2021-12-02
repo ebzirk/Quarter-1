@@ -39,7 +39,7 @@ public class Language {
 
     void generate(){
         Random random = new Random();
-        int susan = random.nextInt(mandoa.length + 1);
+        int susan = random.nextInt(mandoa.length);
         mandoAnswer = mandoa[susan];
         hintAnswer = hints[susan];
         engAnswer =  engVers[susan];
