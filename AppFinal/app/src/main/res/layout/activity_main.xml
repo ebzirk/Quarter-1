@@ -24,40 +24,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintVertical_bias="0.048" android:textSize="48sp" android:gravity="bottom|center"
             android:fontFamily="@font/mandalor" android:textColor="#000000"/>
-    <TextView
-            android:layout_width="260dp"
-            android:layout_height="98dp" android:id="@+id/mandoWords"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintVertical_bias="0.277" android:textColor="#000000" android:gravity="center"
-            android:textSize="24sp"/>
-    <TextView
-            android:layout_width="260dp"
-            android:layout_height="98dp" android:id="@+id/mandoScript"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintVertical_bias="0.277" android:textColor="#000000" android:gravity="center"
-            android:textSize="60sp" android:fontFamily="@font/mandalor"/>
-    <Button
-            android:text="Check"
-            android:layout_width="238dp"
-            android:layout_height="58dp" android:id="@+id/languageCheck"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:backgroundTint="#9E0101" android:onClick="languageCheck"
-            android:visibility="invisible" app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintVertical_bias="0.811"/>
-    <Button
-            android:text="Check"
-            android:layout_width="238dp"
-            android:layout_height="58dp" android:id="@+id/scriptCheck"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:backgroundTint="#9E0101" android:onClick="scriptCheck"
-            android:visibility="invisible" app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintVertical_bias="0.811"/>
     <Button
             android:text="Check"
             android:layout_width="238dp"
@@ -70,11 +36,11 @@
     <Button
             android:text="Mando'a Language!"
             android:layout_width="215dp"
-            android:layout_height="68dp" android:id="@+id/button2"
-            android:onClick="languageClick" android:visibility="visible"
+            android:layout_height="68dp" android:id="@+id/mandoLanguage"
+            android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:backgroundTint="#420000"/>
+            app:backgroundTint="#420000" android:onClick="languageClick"/>
     <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -84,13 +50,13 @@
             android:hint="Input Answer" android:visibility="invisible" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.494"
-            app:layout_constraintVertical_bias="0.571"/>
+            app:layout_constraintVertical_bias="0.647"/>
     <TextView
             android:layout_width="182dp"
             android:layout_height="31dp" android:id="@+id/ansStatus"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintVertical_bias="0.654"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintVertical_bias="0.717"
             app:layout_constraintHorizontal_bias="0.497" android:visibility="invisible"
             android:gravity="center|center_vertical" android:textSize="20sp" android:textColor="#000000"/>
     <TextView
@@ -127,8 +93,8 @@
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintHorizontal_bias="0.034" app:layout_constraintVertical_bias="0.976"/>
     <ImageView
-            android:layout_width="266dp"
-            android:layout_height="299dp" tools:srcCompat="@tools:sample/avatars" android:id="@+id/character"
+            android:layout_width="260dp"
+            android:layout_height="214dp" tools:srcCompat="@tools:sample/avatars" android:id="@+id/character"
             android:visibility="invisible" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.517"

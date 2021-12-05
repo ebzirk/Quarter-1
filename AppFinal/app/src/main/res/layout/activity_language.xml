@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".LanguageActivity">
+
+    <Button
+            android:text="Back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/langBack"
+            android:textColor="#FDFCFC"
+            app:backgroundTint="#420000" android:visibility="visible" android:onClick="backClick"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.034" app:layout_constraintVertical_bias="0.976"/>
+    <Button
+            android:text="Check"
+            android:layout_width="238dp"
+            android:layout_height="58dp" android:id="@+id/languageCheck"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:backgroundTint="#9E0101" android:onClick="languageCheck"
+            android:visibility="visible" app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintVertical_bias="0.811"/>
+    <TextView
+            android:layout_width="260dp"
+            android:layout_height="98dp" android:id="@+id/mandoWords"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintVertical_bias="0.398" android:textColor="#000000" android:gravity="center"
+            android:textSize="24sp"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/landAnsInput"
+            android:hint="Input Answer" android:visibility="visible" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintVertical_bias="0.647"/>
+    <TextView
+            android:layout_width="182dp"
+            android:layout_height="31dp" android:id="@+id/langAns"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintVertical_bias="0.717"
+            app:layout_constraintHorizontal_bias="0.497" android:visibility="visible"
+            android:gravity="center|center_vertical" android:textSize="20sp" android:textColor="#000000"/>
+    <TextView
+            android:layout_width="190dp"
+            android:layout_height="45dp" android:id="@+id/langHint"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="20sp" android:gravity="center"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

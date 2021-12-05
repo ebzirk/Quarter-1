@@ -1,5 +1,6 @@
 package com.example.appfinal;
 
+import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -10,8 +11,6 @@ import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
 
-    Language language = new Language();
-    Script script = new Script();
     Check check = new Check();
     Trivia trivia = new Trivia();
 
@@ -20,8 +19,8 @@ public class MainActivity extends AppCompatActivity {
     TextView ansStatus;
     ImageView character;
     Button checkAnswer;
-    Button languageButton;
     Button scriptButton;
+    Button languageButton;
     Button scriptStart;
     Button backButton;
     Button characterButton;
@@ -42,9 +41,9 @@ public class MainActivity extends AppCompatActivity {
         //buttons
         checkAnswer = findViewById(R.id.languageCheck);
         scriptStart = findViewById(R.id.scriptCheck);
-        languageButton = findViewById(R.id.button2);
         scriptButton = findViewById(R.id.button3);
-        characterButton = findViewById(R.id.button4);
+
+
         characterCheck = findViewById(R.id.characterCheck);
 
         //answer related
@@ -53,94 +52,32 @@ public class MainActivity extends AppCompatActivity {
 
         //back button
         backButton = findViewById(R.id.back);
+
+        languageClick();
+        scriptClick();
     }
 
-    public void characterClick(View view){
-        trivia.charTrivia();
-        character.setImageResource(trivia.charShown);
-        if(checkAnswer.getVisibility() == View.INVISIBLE){
-            character.setVisibility(View.VISIBLE);
-            characterCheck.setVisibility(View.VISIBLE);
-            answer.setVisibility(View.VISIBLE);
-            ansStatus.setVisibility(View.VISIBLE);
-            scriptButton.setVisibility(View.INVISIBLE);
-            languageButton.setVisibility(View.INVISIBLE);
-            characterButton.setVisibility(View.INVISIBLE);
-            backButton.setVisibility(View.VISIBLE);
-        }
-        else{checkAnswer.setVisibility(View.VISIBLE);
-        }
+
+    public void scriptClick() {
+        scriptButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, ScriptActivity.class));
+            }
+        });
     }
 
-    public void languageClick(View view){
-        language.generate();
-        mandoWords.setText(language.mandoAnswer);
-        if(checkAnswer.getVisibility() == View.INVISIBLE){
-            mandoWords.setVisibility(View.VISIBLE);
-            checkAnswer.setVisibility(View.VISIBLE);
-            answer.setVisibility(View.VISIBLE);
-            ansStatus.setVisibility(View.VISIBLE);
-            scriptButton.setVisibility(View.INVISIBLE);
-            languageButton.setVisibility(View.INVISIBLE);
-            backButton.setVisibility(View.VISIBLE);
-        }
-        else{checkAnswer.setVisibility(View.VISIBLE);
-        }
+    private void languageClick() {
+        languageButton = findViewById(R.id.mandoLanguage);
+        languageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, LanguageActivity.class));
+            }
+        });
     }
 
-    public void scriptClick(View view) {
-        script.generate();
-        mandoScript.setText(script.letter);
-        if (scriptStart.getVisibility() == View.INVISIBLE) {
-            mandoScript.setVisibility(View.VISIBLE);
-            scriptStart.setVisibility(View.VISIBLE);
-            answer.setVisibility(View.VISIBLE);
-            ansStatus.setVisibility(View.VISIBLE);
-            scriptButton.setVisibility(View.INVISIBLE);
-            languageButton.setVisibility(View.INVISIBLE);
-            backButton.setVisibility(View.VISIBLE);
-        } else {
-            checkAnswer.setVisibility(View.VISIBLE);
-        }
-    }
-
-    public void backClick(View view){
-        mandoWords.setVisibility(View.INVISIBLE);
-        mandoScript.setVisibility(View.INVISIBLE);
-        checkAnswer.setVisibility(View.INVISIBLE);
-        scriptStart.setVisibility(View.INVISIBLE);
-        answer.setVisibility(View.INVISIBLE);
-        ansStatus.setVisibility(View.INVISIBLE);
-        scriptButton.setVisibility(View.VISIBLE);
-        languageButton.setVisibility(View.VISIBLE);
-        backButton.setVisibility(View.INVISIBLE);
-    }
-
-    public void scriptCheck(View view){
-        boolean ansCheck = check.wordCheck(script.letter,answer.getText().toString());
-        if (ansCheck){
-            ansStatus.setText("Correct!!");
-            script.generate();
-            mandoScript.setText(script.letter);
-            answer.setText("");
-        } else {
-            ansStatus.setText("Incorrect!!");
-        }
-    }
-
-    public void languageCheck(View view){
-        boolean ansCheck = check.wordCheck(language.engAnswer,answer.getText().toString());
-        if (ansCheck){
-            ansStatus.setText("Correct!!");
-            language.generate();
-            mandoWords.setText(language.mandoAnswer);
-            answer.setText("");
-        } else {
-            ansStatus.setText("Incorrect!!");
-        }
-    }
-
-    public void charCheck(View view){
+    public void charCheck(View view1){
         boolean ansCheck = check.wordCheck(trivia.charAns, answer.getText().toString());
         if (ansCheck){
             ansStatus.setText("Correct!");
