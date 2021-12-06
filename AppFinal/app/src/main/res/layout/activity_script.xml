@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ScriptActivity">
+        tools:context=".ScriptActivity" android:background="#6A6A6A">
 
     <TextView
             android:layout_width="182dp"
@@ -25,13 +25,13 @@
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintHorizontal_bias="0.034" app:layout_constraintVertical_bias="0.976"/>
     <TextView
-            android:layout_width="260dp"
-            android:layout_height="98dp" android:id="@+id/mandoScript"
+            android:layout_width="253dp"
+            android:layout_height="142dp" android:id="@+id/mandoScript"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintVertical_bias="0.277" android:textColor="#000000" android:gravity="center"
-            android:textSize="60sp" android:fontFamily="@font/mandalor" android:visibility="visible"/>
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintVertical_bias="0.347" android:textColor="#000000" android:gravity="center"
+            android:textSize="96sp" android:fontFamily="@font/mandalor" android:visibility="visible"/>
     <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -48,7 +48,23 @@
             android:layout_height="58dp" android:id="@+id/scriptCheck"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:backgroundTint="#9E0101" android:onClick="scriptCheck"
+            app:layout_constraintEnd_toEndOf="parent" app:backgroundTint="#4E0000" android:onClick="scriptCheck"
             android:visibility="visible" app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintVertical_bias="0.811"/>
+            app:layout_constraintVertical_bias="0.811" android:fontFamily="@font/distantgalaxy"
+            android:textSize="20sp"/>
+    <TextView
+            android:text="Guess the Letter"
+            android:layout_width="304dp"
+            android:layout_height="100dp" android:id="@+id/scriptTitle"
+            android:fontFamily="@font/distantgalaxy" android:textSize="48sp"
+            android:textColor="#000000" android:gravity="center_horizontal"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495" app:layout_constraintVertical_bias="0.072"/>
+    <ImageView
+            android:layout_width="344dp"
+            android:layout_height="403dp" app:srcCompat="@drawable/helmet" android:id="@+id/helmet"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

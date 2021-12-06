@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".LanguageActivity">
+        tools:context=".LanguageActivity" android:background="#6A6A6A">
 
     <Button
             android:text="Back"
@@ -15,24 +15,26 @@
             app:backgroundTint="#420000" android:visibility="visible" android:onClick="backClick"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintHorizontal_bias="0.034" app:layout_constraintVertical_bias="0.976"/>
+            app:layout_constraintHorizontal_bias="0.034" app:layout_constraintVertical_bias="0.976"
+            android:fontFamily="@font/distantgalaxy"/>
     <Button
             android:text="Check"
             android:layout_width="238dp"
-            android:layout_height="58dp" android:id="@+id/languageCheck"
+            android:layout_height="58dp" android:id="@+id/langCheck"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:backgroundTint="#9E0101" android:onClick="languageCheck"
+            app:layout_constraintEnd_toEndOf="parent" app:backgroundTint="#420000" android:onClick="languageCheck"
             android:visibility="visible" app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintVertical_bias="0.811"/>
+            app:layout_constraintVertical_bias="0.811" android:fontFamily="@font/distantgalaxy"
+            android:textSize="20sp"/>
     <TextView
-            android:layout_width="260dp"
-            android:layout_height="98dp" android:id="@+id/mandoWords"
+            android:layout_width="372dp"
+            android:layout_height="134dp" android:id="@+id/mandoWords"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.496"
-            app:layout_constraintVertical_bias="0.398" android:textColor="#000000" android:gravity="center"
-            android:textSize="24sp"/>
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.487"
+            app:layout_constraintVertical_bias="0.4" android:textColor="#000000" android:gravity="center"
+            android:textSize="34sp" android:fontFamily="@font/distantgalaxy"/>
     <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -44,17 +46,43 @@
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintVertical_bias="0.647"/>
     <TextView
-            android:layout_width="182dp"
-            android:layout_height="31dp" android:id="@+id/langAns"
+            android:layout_width="223dp"
+            android:layout_height="32dp" android:id="@+id/langAns"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintVertical_bias="0.717"
             app:layout_constraintHorizontal_bias="0.497" android:visibility="visible"
-            android:gravity="center|center_vertical" android:textSize="20sp" android:textColor="#000000"/>
+            android:gravity="center|center_vertical" android:textSize="20sp" android:textColor="#000000"
+            android:fontFamily="@font/distantgalaxy"/>
     <TextView
-            android:layout_width="190dp"
-            android:layout_height="45dp" android:id="@+id/langHint"
+            android:layout_width="283dp"
+            android:layout_height="63dp" android:id="@+id/langHint"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            android:textSize="20sp" android:gravity="center"/>
+            android:textSize="20sp" android:gravity="center" app:layout_constraintVertical_bias="0.523"/>
+    <TextView
+            android:text="Mando'a Language"
+            android:layout_width="367dp"
+            android:layout_height="83dp" android:id="@+id/textView3"
+            android:fontFamily="@font/distantgalaxy" android:textSize="48sp"
+            android:textColor="#000000" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintVertical_bias="0.024"
+            android:gravity="center|center_horizontal"/>
+    <TextView
+            android:text="mando'a"
+            android:layout_width="26dp"
+            android:layout_height="623dp" android:id="@+id/mandoHint"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.051" app:layout_constraintVertical_bias="1.0"
+            android:fontFamily="@font/mandalor" android:textSize="65sp"/>
+    <TextView
+            android:layout_width="104dp"
+            android:layout_height="58dp" android:id="@+id/langScore"
+            android:fontFamily="@font/distantgalaxy"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.95" app:layout_constraintVertical_bias="0.179"
+            android:textSize="20sp" android:textColor="#000000" android:background="#9F9F9F" android:gravity="center"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,6 @@
 package com.example.appfinal;
 
+import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,16 +24,22 @@ public class CharacterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_character);
+        getSupportActionBar().hide();
         trivia.charTrivia();
 
-        characterCheck = findViewById(R.id.characterCheck);
+        //text fields
         ansStatus = findViewById(R.id.charAnsStatus);
         answer = findViewById(R.id.charAnsInput);
         character = findViewById(R.id.character);
 
+        //buttons
+        characterCheck = findViewById(R.id.characterCheck);
         backButton = findViewById(R.id.charBack);
 
+
         character.setImageResource(trivia.charShown);
+
+        backCharClick();
     }
 
     public void charCheck(View view){
@@ -45,5 +52,15 @@ public class CharacterActivity extends AppCompatActivity {
         } else {
             ansStatus.setText("Incorrect!");
         }
+    }
+
+    private void backCharClick() {
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(CharacterActivity.this,
+                        MainActivity.class));
+            }
+        });
     }
 }

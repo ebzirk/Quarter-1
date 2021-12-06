@@ -6,6 +6,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity" android:background="#6A6A6A">
+    <ImageView
+            android:layout_width="533dp"
+            android:layout_height="691dp" app:srcCompat="@drawable/mythskull" android:id="@+id/mythSkull"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.0" app:layout_constraintStart_toStartOf="parent"
+            android:rotation="17" android:rotationX="25" app:layout_constraintHorizontal_bias="0.106"
+            android:rotationY="-12"/>
     <Button
             android:text="Mando'a Script!"
             android:layout_width="215dp"
@@ -17,12 +25,12 @@
             app:backgroundTint="#420000"/>
     <TextView
             android:text="Su'cuy, Vod"
-            android:layout_width="393dp"
-            android:layout_height="56dp" android:id="@+id/title"
+            android:layout_width="401dp"
+            android:layout_height="88dp" android:id="@+id/title"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintVertical_bias="0.048" android:textSize="48sp" android:gravity="bottom|center"
+            app:layout_constraintVertical_bias="0.048" android:textSize="60sp" android:gravity="bottom|center"
             android:fontFamily="@font/mandalor" android:textColor="#000000"/>
     <Button
             android:text="Mando'a Language!"
@@ -55,17 +63,18 @@
             android:layout_height="57dp" android:id="@+id/textView"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintVertical_bias="0.11"
-            android:gravity="center" android:text="Su'cuy, Vod." app:layout_constraintHorizontal_bias="0.55"
-            android:textSize="20sp"/>
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintVertical_bias="0.176"
+            android:gravity="center" android:text="Su'cuy, Vod." app:layout_constraintHorizontal_bias="0.47"
+            android:textSize="20sp" android:fontFamily="@font/distantgalaxy" android:textColor="#000000"/>
     <TextView
             android:layout_width="394dp"
-            android:layout_height="57dp" android:id="@+id/textView2"
+            android:layout_height="57dp" android:id="@+id/intro"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintVertical_bias="0.148"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintVertical_bias="0.209"
             android:gravity="center" app:layout_constraintHorizontal_bias="0.588"
-            android:textSize="20sp"/>
+            android:textSize="20sp" android:fontFamily="@font/distantgalaxy"
+            android:textColor="#000000" android:text="Please select a quiz."/>
     <Button
             android:text="Character Trivia!"
             android:layout_width="215dp"

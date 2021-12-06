@@ -5,14 +5,22 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".CharacterActivity">
+        tools:context=".CharacterActivity" android:background="#6A6A6A">
 
+    <TextView
+            android:text="CHARACTER TRIVIA"
+            android:layout_width="79dp"
+            android:layout_height="643dp" android:id="@+id/textView4"
+            android:fontFamily="@font/aurabesh" android:textSize="96sp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.061"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="1.0" android:textColor="#92191919"/>
     <TextView
             android:layout_width="182dp"
             android:layout_height="31dp" android:id="@+id/charAnsStatus"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintVertical_bias="0.717"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintVertical_bias="0.778"
             app:layout_constraintHorizontal_bias="0.497" android:visibility="visible"
             android:gravity="center|center_vertical" android:textSize="20sp" android:textColor="#000000"/>
     <EditText
@@ -23,31 +31,42 @@
             android:id="@+id/charAnsInput"
             android:hint="Input Answer" android:visibility="visible" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.494"
-            app:layout_constraintVertical_bias="0.647"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.728"/>
     <Button
             android:text="Back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/charBack"
             android:textColor="#FDFCFC"
-            app:backgroundTint="#420000" android:visibility="visible" android:onClick="backClick"
+            app:backgroundTint="#420000" android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintHorizontal_bias="0.034" app:layout_constraintVertical_bias="0.976"/>
-    <ImageView
-            android:layout_width="260dp"
-            android:layout_height="214dp" tools:srcCompat="@tools:sample/avatars" android:id="@+id/character"
-            android:visibility="visible" app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.517"
-            app:layout_constraintVertical_bias="0.282"/>
+            app:layout_constraintHorizontal_bias="0.034" app:layout_constraintVertical_bias="0.976"
+            android:onClick="backCharClick" android:fontFamily="@font/distantgalaxy"/>
     <Button
             android:text="Check"
-            android:layout_width="238dp"
-            android:layout_height="58dp" android:id="@+id/characterCheck"
+            android:layout_width="278dp"
+            android:layout_height="64dp" android:id="@+id/characterCheck"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:backgroundTint="#9E0101" android:onClick="charCheck"
-            android:visibility="visible" app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintVertical_bias="0.811"/>
+            app:layout_constraintEnd_toEndOf="parent" app:backgroundTint="#4E0000" android:onClick="charCheck"
+            android:visibility="visible" app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintVertical_bias="0.887" android:fontFamily="@font/distantgalaxy" android:textSize="24sp"
+            android:lineSpacingExtra="16sp" tools:text="Check"/>
+    <TextView
+            android:text="Character Trivia"
+            android:layout_width="384dp"
+            android:layout_height="163dp" android:id="@+id/charTitle"
+            android:fontFamily="@font/starjetti" android:textSize="50sp"
+            android:gravity="center|top" android:textColor="#000000" android:lineSpacingExtra="0sp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.481" app:layout_constraintVertical_bias="0.028"/>
+    <ImageView
+            android:layout_width="259dp"
+            android:layout_height="266dp" tools:srcCompat="@tools:sample/avatars" android:id="@+id/character"
+            android:visibility="visible" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.436"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
