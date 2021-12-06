@@ -33,11 +33,10 @@ public class ScriptActivity extends AppCompatActivity {
 
         backButton = findViewById(R.id.scriptBack);
 
-        scriptCheck();
         backClick();
     }
 
-    private void scriptCheck(){
+    public void scriptCheck(View view){
         boolean ansCheck = check.wordCheck(script.letter,answer.getText().toString());
         if (ansCheck){
             ansStatus.setText("Correct!!");

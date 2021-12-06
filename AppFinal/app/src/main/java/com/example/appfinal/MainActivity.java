@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         checkAnswer = findViewById(R.id.languageCheck);
         scriptStart = findViewById(R.id.scriptCheck);
         scriptButton = findViewById(R.id.button3);
+        characterButton = findViewById(R.id.button4);
 
 
         characterCheck = findViewById(R.id.characterCheck);
@@ -55,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
         languageClick();
         scriptClick();
+        characterClick();
     }
 
 
@@ -77,15 +79,14 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void charCheck(View view1){
-        boolean ansCheck = check.wordCheck(trivia.charAns, answer.getText().toString());
-        if (ansCheck){
-            ansStatus.setText("Correct!");
-            trivia.charTrivia();
-            character.setImageResource(trivia.charShown);
-            answer.setText("");
-        } else {
-            ansStatus.setText("Incorrect!");
-        }
+    private void characterClick(){
+        characterButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, CharacterActivity.class));
+            }
+        });
     }
+
+
 }

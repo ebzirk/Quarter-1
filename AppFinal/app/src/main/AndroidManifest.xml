@@ -9,6 +9,8 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/Theme.AppFinal">
+        <activity android:name=".CharacterActivity">
+        </activity>
         <activity android:name=".ScriptActivity">
         </activity>
         <activity android:name=".LanguageActivity">

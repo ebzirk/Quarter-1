@@ -25,15 +25,6 @@
             app:layout_constraintVertical_bias="0.048" android:textSize="48sp" android:gravity="bottom|center"
             android:fontFamily="@font/mandalor" android:textColor="#000000"/>
     <Button
-            android:text="Check"
-            android:layout_width="238dp"
-            android:layout_height="58dp" android:id="@+id/characterCheck"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:backgroundTint="#9E0101" android:onClick="charCheck"
-            android:visibility="invisible" app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintVertical_bias="0.811"/>
-    <Button
             android:text="Mando'a Language!"
             android:layout_width="215dp"
             android:layout_height="68dp" android:id="@+id/mandoLanguage"
@@ -92,12 +83,5 @@
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintHorizontal_bias="0.034" app:layout_constraintVertical_bias="0.976"/>
-    <ImageView
-            android:layout_width="260dp"
-            android:layout_height="214dp" tools:srcCompat="@tools:sample/avatars" android:id="@+id/character"
-            android:visibility="invisible" app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.517"
-            app:layout_constraintVertical_bias="0.282"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
