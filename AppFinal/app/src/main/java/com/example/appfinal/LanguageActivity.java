@@ -33,8 +33,6 @@ public class LanguageActivity extends AppCompatActivity {
         language.generate();
         mandoWords = findViewById(R.id.mandoWords);
         mandoWords.setText(language.mandoAnswer);
-        mandoHint = findViewById(R.id.mandoHint);
-        mandoHint.setText(language.mandoAnswer);
         langHint = findViewById(R.id.langHint);
         langScore = findViewById(R.id.langScore);
         backButton = findViewById(R.id.langBack);
@@ -60,7 +58,6 @@ public class LanguageActivity extends AppCompatActivity {
                     ansStatus.setText("Correct!!");
                     language.generate();
                     mandoWords.setText(language.mandoAnswer);
-                    mandoHint.setText(language.mandoAnswer);
                     answer.setText("");
                     langHint.setText("");
                     round = 0;

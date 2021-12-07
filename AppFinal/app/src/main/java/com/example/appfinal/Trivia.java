@@ -11,7 +11,7 @@ public class Trivia {
     int charPic[] = {R.drawable.bo, R.drawable.boba, R.drawable.din, R.drawable.ultimate, R.drawable.jango,
             R.drawable.jaster, R.drawable.paz, R.drawable.sabine};
     String charName[] = {"Bo Katan", "Boba Fett", "Din Djarin", "Mand'alor the Ultimate", "Jango Fett", "Jaster Mereel",
-    "Paz Vizsla", "Sabine Wren"};
+            "Paz Vizsla", "Sabine Wren"};
 
     // character Trivia, pulls up images for the player to guess
     void charTrivia() {

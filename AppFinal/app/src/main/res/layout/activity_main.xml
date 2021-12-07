@@ -22,7 +22,7 @@
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.505" app:layout_constraintVertical_bias="0.371"
-            app:backgroundTint="#420000"/>
+            app:backgroundTint="#420000" android:fontFamily="@font/distantgalaxy"/>
     <TextView
             android:text="Su'cuy, Vod"
             android:layout_width="401dp"
@@ -39,7 +39,7 @@
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:backgroundTint="#420000" android:onClick="languageClick"/>
+            app:backgroundTint="#420000" android:onClick="languageClick" android:fontFamily="@font/distantgalaxy"/>
     <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -82,7 +82,17 @@
             android:onClick="characterClick" android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:backgroundTint="#420000" app:layout_constraintVertical_bias="0.634"/>
+            app:backgroundTint="#420000" app:layout_constraintVertical_bias="0.634"
+            android:fontFamily="@font/distantgalaxy"/>
+    <Button
+            android:text="Surprise Me!"
+            android:layout_width="215dp"
+            android:layout_height="68dp" android:id="@+id/surprise"
+            android:onClick="surpriseClick" android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:backgroundTint="#420000" app:layout_constraintVertical_bias="0.772"
+            app:layout_constraintHorizontal_bias="0.505" android:fontFamily="@font/distantgalaxy"/>
     <Button
             android:text="Back"
             android:layout_width="wrap_content"

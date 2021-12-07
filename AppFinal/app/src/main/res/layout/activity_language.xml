@@ -71,12 +71,12 @@
             android:gravity="center|center_horizontal"/>
     <TextView
             android:text="mando'a"
-            android:layout_width="26dp"
-            android:layout_height="623dp" android:id="@+id/mandoHint"
+            android:layout_width="93dp"
+            android:layout_height="575dp" android:id="@+id/mandoHint"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.051" app:layout_constraintVertical_bias="1.0"
-            android:fontFamily="@font/mandalor" android:textSize="65sp"/>
+            app:layout_constraintHorizontal_bias="0.059" app:layout_constraintVertical_bias="0.705"
+            android:fontFamily="@font/aurabesh" android:textSize="96sp"/>
     <TextView
             android:layout_width="104dp"
             android:layout_height="58dp" android:id="@+id/langScore"

@@ -8,7 +8,6 @@
         tools:context=".CharacterActivity" android:background="#6A6A6A">
 
     <TextView
-            android:text="CHARACTER TRIVIA"
             android:layout_width="79dp"
             android:layout_height="643dp" android:id="@+id/textView4"
             android:fontFamily="@font/aurabesh" android:textSize="96sp" app:layout_constraintEnd_toEndOf="parent"
