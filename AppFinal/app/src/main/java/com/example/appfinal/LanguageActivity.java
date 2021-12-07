@@ -15,7 +15,6 @@ public class LanguageActivity extends AppCompatActivity {
     TextView mandoWords;
     TextView answer;
     TextView ansStatus;
-    TextView mandoHint;
     TextView langHint;
     TextView langScore;
     Button backButton;
@@ -31,28 +30,34 @@ public class LanguageActivity extends AppCompatActivity {
         getSupportActionBar().hide();
 
         language.generate();
+
+        //Texts
         mandoWords = findViewById(R.id.mandoWords);
-        mandoWords.setText(language.mandoAnswer);
-        langHint = findViewById(R.id.langHint);
+        mandoWords.setText(language.mandoAnswer); //Shows the answer
         langScore = findViewById(R.id.langScore);
+
+        //buttons
         backButton = findViewById(R.id.langBack);
         langButton = findViewById(R.id.langCheck);
 
-        answer = findViewById(R.id.landAnsInput);
+        answer = findViewById(R.id.landAnsInput); // Where you put the answer in
         ansStatus = findViewById(R.id.langAns);
         langScore.setText("Score\n");
 
         backClick();
     }
 
+    //When the button is clicked, will check if the answer is correct or not.
+    //if it is, it will move on to the next word to guess.
+    //If not, you have 3 lives before it doesn't let you try again.
     public void languageCheck(View view) {
         boolean ansCheck = check.wordCheck(language.engAnswer, answer.getText().toString());
-        if (round <= 2 || score == 90) {
-            if (score == 100) {
+        if (round <= 2 || score == 40) {
+            if (score == 40) {
                 ansStatus.setText("YOU WIN");
                 langHint.setText("");
                 langButton.setVisibility(View.INVISIBLE);
-                langScore.setText("Score\n" + Integer.toString(score));
+                langScore.setText("Score\n" + Integer.toString(score + 10));
             } else {
                 if (ansCheck) {
                     ansStatus.setText("Correct!!");
@@ -80,6 +85,7 @@ public class LanguageActivity extends AppCompatActivity {
         }
     }
 
+    //Back button to take you back to the main page of the app.
     private void backClick() {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override

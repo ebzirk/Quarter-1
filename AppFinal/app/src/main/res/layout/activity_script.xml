@@ -9,12 +9,13 @@
 
     <TextView
             android:layout_width="182dp"
-            android:layout_height="31dp" android:id="@+id/scriptAnsStatus"
+            android:layout_height="44dp" android:id="@+id/scriptAnsStatus"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintVertical_bias="0.717"
             app:layout_constraintHorizontal_bias="0.497" android:visibility="visible"
-            android:gravity="center|center_vertical" android:textSize="20sp" android:textColor="#000000"/>
+            android:gravity="center|center_vertical" android:textSize="20sp" android:textColor="#000000"
+            android:fontFamily="@font/distantgalaxy"/>
     <Button
             android:text="Back"
             android:layout_width="wrap_content"
@@ -23,7 +24,8 @@
             app:backgroundTint="#420000" android:visibility="visible" android:onClick="backClick"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintHorizontal_bias="0.034" app:layout_constraintVertical_bias="0.976"/>
+            app:layout_constraintHorizontal_bias="0.034" app:layout_constraintVertical_bias="0.976"
+            android:fontFamily="@font/distantgalaxy"/>
     <TextView
             android:layout_width="253dp"
             android:layout_height="142dp" android:id="@+id/mandoScript"
@@ -48,7 +50,7 @@
             android:layout_height="58dp" android:id="@+id/scriptCheck"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:backgroundTint="#4E0000" android:onClick="scriptCheck"
+            app:layout_constraintEnd_toEndOf="parent" app:backgroundTint="#420000" android:onClick="scriptCheck"
             android:visibility="visible" app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintVertical_bias="0.811" android:fontFamily="@font/distantgalaxy"
             android:textSize="20sp"/>
@@ -67,4 +69,19 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+            android:layout_width="121dp"
+            android:layout_height="73dp" android:id="@+id/letterAns"
+            android:fontFamily="@font/distantgalaxy" android:textSize="60sp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.542" android:textColor="#000000" android:gravity="center_horizontal"/>
+    <TextView
+            android:layout_width="104dp"
+            android:layout_height="58dp" android:id="@+id/scriptScore"
+            android:fontFamily="@font/distantgalaxy"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.964" app:layout_constraintVertical_bias="0.193"
+            android:textSize="20sp" android:textColor="#000000" android:background="#9F9F9F" android:gravity="center"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

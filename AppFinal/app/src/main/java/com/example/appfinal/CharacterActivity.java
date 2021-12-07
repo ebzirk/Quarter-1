@@ -14,11 +14,14 @@ public class CharacterActivity extends AppCompatActivity {
     Trivia trivia = new Trivia();
     Check check = new Check();
 
-    Button characterCheck;
+    //Texts
     ImageView character;
     TextView ansStatus;
-    Button backButton;
     EditText answer;
+
+    //Buttons
+    Button backButton;
+    Button characterCheck;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,12 +39,14 @@ public class CharacterActivity extends AppCompatActivity {
         characterCheck = findViewById(R.id.characterCheck);
         backButton = findViewById(R.id.charBack);
 
-
+        //Character image shown
         character.setImageResource(trivia.charShown);
 
         backCharClick();
     }
 
+    //Checks to see if the name entered matches the image shown.
+    //If they match, it moves to the next pairing.
     public void charCheck(View view){
         boolean ansCheck = check.wordCheck(trivia.charAns, answer.getText().toString());
         if (ansCheck){
@@ -54,6 +59,7 @@ public class CharacterActivity extends AppCompatActivity {
         }
     }
 
+    //Back button to take you back to the main page of the app.
     private void backCharClick() {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override

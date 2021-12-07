@@ -8,12 +8,14 @@
         tools:context=".CharacterActivity" android:background="#6A6A6A">
 
     <TextView
-            android:layout_width="79dp"
-            android:layout_height="643dp" android:id="@+id/textView4"
+            android:layout_width="279dp"
+            android:layout_height="631dp"
+            android:id="@+id/charNameTease"
+            android:text="C\nh\na\nr\na\nc\nt\ne\nr"
             android:fontFamily="@font/aurabesh" android:textSize="96sp" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.061"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.04"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="1.0" android:textColor="#92191919"/>
+            app:layout_constraintVertical_bias="0.874" android:textColor="#92191919"/>
     <TextView
             android:layout_width="182dp"
             android:layout_height="31dp" android:id="@+id/charAnsStatus"
@@ -21,7 +23,8 @@
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintVertical_bias="0.778"
             app:layout_constraintHorizontal_bias="0.497" android:visibility="visible"
-            android:gravity="center|center_vertical" android:textSize="20sp" android:textColor="#000000"/>
+            android:gravity="center|center_vertical" android:textSize="20sp" android:textColor="#000000"
+            android:fontFamily="@font/distantgalaxy"/>
     <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
